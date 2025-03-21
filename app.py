@@ -52,7 +52,7 @@ def classify_text():
 
     # Filter emotions with probability > 0.3
     # this means that the model will only retrieve emotions with confidence of at least 30%
-    threshold = 0.3
+    threshold = 0.2
     result = [GOEMOTIONS_LABELS[i] for i, prob in enumerate(probs) if prob > threshold]
 
     return jsonify({ "tags": result })
